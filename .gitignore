@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment configuration
+.env
+.env.local
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and databases
+logs/
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Data directories (ignore generated artifacts but keep sample PDFs)
+data/chroma_db/
+data/uploads/
+!data/sample_document.pdf
+!data/documents/
+!data/documents/*
+!sample_document.pdf
+
+# IDEs
+.idea/
+.vscode/
