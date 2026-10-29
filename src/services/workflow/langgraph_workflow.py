@@ -51,7 +51,7 @@ class LangGraphRAGWorkflow(BaseRAGWorkflow):
         self._graph = None
 
     def _cache_key(self, query: str, filter_doc_id: Optional[str]) -> str:
-        raw = f"{query.strip().lower()}:{filter_doc_id or 'all'}"
+        raw = f"{self.llm.provider_name}:{query.strip().lower()}:{filter_doc_id or 'all'}"
         return hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
     # --- LangGraph Nodes ---

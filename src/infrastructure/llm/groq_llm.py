@@ -13,7 +13,7 @@ class GroqLLM(BaseLLM):
     Supports models like llama-3.3-70b-versatile, llama-3.1-8b-instant, etc.
     """
 
-    def __init__(self, api_key: str, model_name: str = "llama-3.3-70b-versatile"):
+    def __init__(self, api_key: str, model_name: str = "openai/gpt-oss-20b"):
         if not api_key:
             raise ValueError("GROQ_API_KEY must be provided to use GroqLLM")
         self.api_key = api_key
